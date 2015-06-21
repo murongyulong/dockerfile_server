@@ -1,0 +1,29 @@
+{
+	"debug": false,
+	"interval": 5,
+	"dockerPort": 2375,
+	"domain": "{DOMAIN}",
+	"localIp": "",
+	"redis": {
+		"dsn":"{REDIS_HOST}:{REDIS_PORT}",
+		"maxIdle": 10,
+		"rsPrefix": "/rs/",
+		"cnamePrefix": "/cname/"
+	},
+	"db": {
+		"dsn": "{DB_USER}:{DB_PWD}@tcp({DB_HOST}:3306)/{DB_NAME}?loc=Local&parseTime=true",
+		"maxIdle": 2
+	},
+	"scribe": {
+		"ip": "{SCRIBE_HOST}",
+		"port": {SCRIBE_PORT}
+	},
+	"http": {
+		"addr": "0.0.0.0",
+		"port": {HTTP_PORT}
+	},
+	"rpc": {
+		"addr": "0.0.0.0",
+		"port": {RPC_PORT}
+	}
+}
