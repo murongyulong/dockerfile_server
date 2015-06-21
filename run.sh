@@ -10,8 +10,6 @@ DB_USER
 DB_PWD
 DB_NAME
 DOMAIN
-HTTP_PORT
-RPC_PORT
 )
 for i in ${require_env[@]}; do
     if [ x${!i} == 'x' ]; then
@@ -29,9 +27,7 @@ sed -i "s/{DB_HOST}/${MYSQL_PORT_3306_TCP_ADDR}/g" $confFile \
 && sed -i "s/{REDIS_PORT}/${REDIS_PORT_6379_TCP_PORT}/g" $confFile \
 && sed -i "s/{SCRIBE_HOST}/${SCRIBE_PORT_1463_TCP_ADDR}/g" $confFile \
 && sed -i "s/{SCRIBE_PORT}/${SCRIBE_PORT_1463_TCP_PORT}/g" $confFile \
-&& sed -i "s/{DOMAIN}/${DOMAIN}/g" $confFile \
-&& sed -i "s/{HTTP_PORT}/${HTTP_PORT}/g" $confFile \
-&& sed -i "s/{RPC_PORT}/${RPC_PORT}/g" $confFile
+&& sed -i "s/{DOMAIN}/${DOMAIN}/g" $confFile
 
 cd $GOPATH/src/github.com/dinp/server/
 ./server

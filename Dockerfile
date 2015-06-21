@@ -9,4 +9,5 @@ WORKDIR $GOPATH/src/github.com/dinp/server/
 COPY cfg.json $GOPATH/src/github.com/dinp/server/cfg.json
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
+EXPOSE 1980 1970
 CMD ["/run.sh"]

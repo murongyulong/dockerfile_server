@@ -20,10 +20,8 @@
 	},
 	"http": {
 		"addr": "0.0.0.0",
-		"port": {HTTP_PORT}
-	},
+		"port": 1980,
 	"rpc": {
 		"addr": "0.0.0.0",
-		"port": {RPC_PORT}
-	}
+		"port": 1970
 }
