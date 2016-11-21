@@ -3,10 +3,9 @@ FROM golang:1.4
 
 RUN mkdir -p $GOPATH/src/golang.org/x \
 && cd $GOPATH/src/golang.org/x \
-&& git clone https://github.com/toolkits/net.git net \
-&& git clone https://github.com/golang/tools.git tools
-
-RUN mkdir -p $GOPATH/src/github.com/dinp \
+&& git clone https://github.com/toolkits/net.git  \
+&& git clone https://github.com/golang/tools.git  \
+&& mkdir -p $GOPATH/src/github.com/dinp \
 && cd $GOPATH/src/github.com/dinp \
 && git clone https://github.com/smartcaas/server.git \
 && cd server \
