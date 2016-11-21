@@ -3,7 +3,7 @@ FROM golang:1.4
 
 RUN cd $GOPATH/src/github.com/ \
 && git clone https://github.com/toolkits/net.git x/net \
-&& git clone https://github.com/golang/tools.git x/tools \
+&& git clone https://github.com/golang/tools.git x/tools 
 COPY $GOPATH/src/github.com/x $GOPATH/src/golang.org/x
 
 RUN mkdir -p $GOPATH/src/github.com/dinp \
