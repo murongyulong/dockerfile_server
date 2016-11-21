@@ -1,4 +1,4 @@
-FROM golang:1.4
+FROM golang:1.7
 
 
 RUN mkdir -p $GOPATH/src/golang.org/x \
